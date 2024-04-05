@@ -21,12 +21,12 @@ body {
     background-color: var(--almost-white);
 }
 
-body.menu-open::before{
+body.escurecer::before {
     content: "";
     position: fixed;
     height: 100vh;
     width: 100%;
-    background-color:rgba(0, 0, 26, 0.5);
+    background-color: rgba(0, 0, 26, 0.5);
     top: 0;
     left: 0;
 }
@@ -34,7 +34,7 @@ body.menu-open::before{
 .header-mobile {
     display: flex;
     justify-content: space-between;
-    align-items: center ;
+    align-items: center;
     margin-bottom: 2rem;
 }
 
@@ -47,7 +47,7 @@ body.menu-open::before{
 .header-mobile nav {
     position: fixed;
     background-color: #FFFDFA;
-    right: 0;
+    right: -16rem;
     top: 0;
     height: 100vh;
     width: 16rem;
@@ -57,10 +57,16 @@ body.menu-open::before{
     flex-direction: column;
     padding: 1.5rem;
     gap: 1.5rem;
+
+    transition: 0.7s;
+}
+
+.header-mobile nav.abrir {
+    right: 0;
 }
 
 .header-mobile nav button {
-    margin-left: auto;
+    align-self: flex-end;
     margin-bottom: 4rem;
 }
 
@@ -106,7 +112,7 @@ body.menu-open::before{
     line-height: 1.5rem;
 }
 
-.segunda-secao{
+.segunda-secao {
     background-color: #00001A;
     margin-bottom: 4rem;
     padding: 1.5rem 1.1rem;
@@ -140,7 +146,7 @@ body.menu-open::before{
     line-height: 1.625rem;
 }
 
-.terceira-secao > div {
+.terceira-secao>div {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -169,5 +175,5 @@ body.menu-open::before{
 .terceira-secao p {
     font-size: 0.9375rem;
     line-height: 1.625rem;
-    color: #5E607A;    
+    color: #5E607A;
 }
